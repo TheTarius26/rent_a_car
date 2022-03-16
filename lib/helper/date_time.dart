@@ -15,3 +15,7 @@ String calculateStartAndEndDate(DateTime start, DateTime end) {
     return '$differenceInYears years';
   }
 }
+
+String parseDate(DateTime date) {
+  return '${date.day}/${date.month}/${date.year}';
+}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rent_a_car/pages/home/widgets/page_indicator.dart';
-import 'package:rent_a_car/pages/home/widgets/rent_active.dart';
-import 'package:rent_a_car/pages/home/widgets/rent_history.dart';
+import 'package:rent_a_car/pages/widgets/page_indicator.dart';
+import 'package:rent_a_car/pages/widgets/rent_active.dart';
+import 'package:rent_a_car/pages/widgets/rent_history.dart';
 
 class PageViewRent extends StatefulWidget {
   const PageViewRent({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _PageViewRentState extends State<PageViewRent> {
       child: Column(
         children: [
           AspectRatio(
-            aspectRatio: 5 / 4,
+            aspectRatio: 12 / 16,
             child: PageView(
               children: const [
                 RentHistory(),

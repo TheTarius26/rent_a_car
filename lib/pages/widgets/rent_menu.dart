@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:rent_a_car/common.dart';
-import 'package:rent_a_car/pages/home/widgets/icon_menu_button.dart';
+import 'package:rent_a_car/pages/widgets/icon_menu_button.dart';
 
 class RentMenu extends StatelessWidget {
   const RentMenu({

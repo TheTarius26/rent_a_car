@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rent_a_car/common.dart';
-import 'package:rent_a_car/pages/home/widgets/list_active.dart';
-import 'package:rent_a_car/pages/home/widgets/page_header.dart';
+import 'package:rent_a_car/data/user.dart';
+import 'package:rent_a_car/pages/viewAll/active_view_all_page.dart';
+import 'package:rent_a_car/pages/widgets/list_active.dart';
+import 'package:rent_a_car/pages/widgets/page_header.dart';
 
 class RentActive extends StatelessWidget {
   const RentActive({
@@ -10,6 +12,7 @@ class RentActive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final listCar = User().activeRent;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
@@ -23,10 +26,21 @@ class RentActive extends StatelessWidget {
             PageHeader(
               icon: Icons.travel_explore,
               title: 'Active Rent',
-              onPressedViewAll: () {},
+              onPressedViewAll: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ActiveViewAllPage(),
+                  ),
+                );
+              },
             ),
             const Divider(thickness: 2),
-            const ListActive(),
+            ListActive(
+              length: listCar.length,
+              listActive: listCar,
+              height: 200,
+            ),
           ],
         ),
       ),
