@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rent_a_car/data/car.dart';
 import 'package:rent_a_car/helper/date_time.dart';
-import 'package:rent_a_car/pages/widgets/history_item.dart';
+import 'package:rent_a_car/pages/home/widgets/history_item.dart';
 
 class ListHistory extends StatelessWidget {
   const ListHistory({

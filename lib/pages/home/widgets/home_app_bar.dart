@@ -43,22 +43,6 @@ class HomeAppBar extends StatelessWidget {
           ),
         ],
       ),
-      leading: IconButton(
-        onPressed: () {},
-        icon: const Icon(
-          Icons.list_alt_rounded,
-          color: kPrimary,
-        ),
-      ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.phone,
-            color: kPrimary,
-          ),
-        ),
-      ],
     );
   }
 }

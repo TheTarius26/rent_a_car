@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:rent_a_car/common.dart';
-import 'package:rent_a_car/data/car.dart';
-import 'package:rent_a_car/helper/date_time.dart';
-import 'package:rent_a_car/pages/widgets/history_header.dart';
-import 'package:rent_a_car/pages/widgets/home_app_bar.dart';
-import 'package:rent_a_car/pages/widgets/rent_history.dart';
-import 'package:rent_a_car/pages/widgets/rent_menu.dart';
+import 'package:rent_a_car/pages/home/widgets/home_app_bar.dart';
+import 'package:rent_a_car/pages/home/widgets/page_view_rent.dart';
+import 'package:rent_a_car/pages/home/widgets/rent_menu.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,13 +27,20 @@ class _HomePageState extends State<HomePage> {
             end: Alignment.topLeft,
           ),
         ),
-        child: CustomScrollView(
+        child: const CustomScrollView(
           slivers: [
             HomeAppBar(),
             RentMenu(),
-            RentHistory(),
+            PageViewRent(),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.phone,
+        ),
+        backgroundColor: kPrimary,
       ),
     );
   }
